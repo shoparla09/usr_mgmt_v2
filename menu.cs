@@ -49,6 +49,21 @@ namespace usr_mgmt_v2
         phonenumber = phonenumber);
 
             return adduser;
-        }       
+        }
+        public void Showusers(List<user> UserList)
+        {
+            if (UserList.Count == 0)
+            {
+                Console.WriteLine("There are no users availible");
+            }
+            else
+            {
+                for (int i = 0; i < UserList.Count; i++)
+                {
+                    Console.WriteLine(UserList[i].getUsername());
+                }
+            }
+            Console.ReadLine();
+        }
     }
 }
