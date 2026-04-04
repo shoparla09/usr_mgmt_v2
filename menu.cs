@@ -6,7 +6,7 @@ namespace usr_mgmt_v2
 {
     internal class menu
     {
-        public void ShowMenu()
+        public int ShowMenu()
         {
             Console.Clear();
             Console.WriteLine("Available options:");
@@ -16,6 +16,7 @@ namespace usr_mgmt_v2
             Console.WriteLine("[4] Delete user");
             Console.WriteLine("[5] Exit application!");
             Console.Write("Choose an option: ");
+            return GetInput();
 
         }
         public int GetInput()
@@ -32,9 +33,9 @@ namespace usr_mgmt_v2
 
            public user adduser()
         {
-             Console.Clear();
+            Console.Clear();
             Console.WriteLine("addUser");
-            Console.WriteLine("üsername: "); string username = Console.ReadLine();
+            Console.WriteLine("username: "); string username = Console.ReadLine();
             Console.WriteLine("password: "); string password = Console.ReadLine();
             Console.WriteLine("email: "); string email = Console.ReadLine();
             Console.WriteLine("address: "); string address = Console.ReadLine();
@@ -45,9 +46,9 @@ namespace usr_mgmt_v2
         password = password,
         email = email,
         address = address,
-        phone = phone);
+        phonenumber = phonenumber);
 
-            return user()
+            return adduser;
         }       
     }
 }

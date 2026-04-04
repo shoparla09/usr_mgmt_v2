@@ -21,5 +21,10 @@ namespace usr_mgmt_v2
             this.phone = phone;
 
         }
+        public string getUsername()
+        {
+            return username;
+        }
+
     }
 }
