@@ -26,5 +26,53 @@ namespace usr_mgmt_v2
             return username;
         }
 
+        public string getPassWord()
+        {
+            return password;
+        }
+
+        public string getEmail()
+        {
+            return email;
+        }
+
+        public string getAddress()
+        {
+            return address;
+        }
+
+        public string getPhone()
+        {
+            return phone;
+        }
+
+        public void setUsername(string a)
+        {
+             this.username = a;
+        }
+
+        public void setPassWord(string b)
+        {
+            this.password = b;
+        }
+
+        public void setEmail(string c)
+        {
+             this.email = c;
+        }
+
+        public void setAddress(string d)
+        {
+            this.address = d;
+        }
+
+        public void setPhone(string e)
+        {
+            this.phone = e;
+        }
+        public void GetUserData()
+        {
+            Console.WriteLine(this.username, this.password, this.email, this.address, this.phone);
+        }
     }
 }

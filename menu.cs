@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace usr_mgmt_v2
@@ -15,12 +16,12 @@ namespace usr_mgmt_v2
             Console.WriteLine("[3] Edit user");
             Console.WriteLine("[4] Delete user");
             Console.WriteLine("[5] Exit application!");
-            Console.Write("Choose an option: ");
-            return GetInput();
+            return GetInput("Choose an option: ");
 
         }
-        public int GetInput()
+        public int GetInput(string msg)
         {
+            Console.Write(msg);
             int option;
             bool tp = Int32.TryParse(Console.ReadLine(), out option);
             while (tp == false)
@@ -60,10 +61,9 @@ namespace usr_mgmt_v2
             {
                 for (int i = 0; i < UserList.Count; i++)
                 {
-                    Console.WriteLine(UserList[i].getUsername());
+                    Console.WriteLine($"[{i + 1}]  {UserList[i].getUsername()}");
                 }
             }
-            Console.ReadLine();
         }
     }
 }
