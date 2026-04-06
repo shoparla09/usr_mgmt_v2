@@ -51,7 +51,7 @@ namespace usr_mgmt_v2
                         {
                             usrNo = menu.GetInput("Select the user to update: ");
                         }
-                        while (usrNo - 1 <= users.Count);
+                        while (usrNo - 1 >= users.Count);
 
                         user user = users[usrNo - 1];
                         Console.WriteLine($"[1] Username:   {user.getUsername()}");
